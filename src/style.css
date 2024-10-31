@@ -6,18 +6,29 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Orbitron', sans-serif; /* Alternativa retro */
   display: flex;
+  background-color: #414141;
 }
 
 /* Nav lateral */
 .sidebar {
   width: 25%;
   background-color: #f0f0f0;
-  padding: 30px;
+  padding: 25px 30px;
   padding-right: 0;
   border-right: 1px solid #ddd;
   font-size: 18px;
+}
+
+/* Nav lateral */
+.sidebar {
+  font-size: 18px;
+  position: fixed; /* Hacer el nav fijo */
+  top: 0; /* Fijarlo a la parte superior de la ventana */
+  left: 0; /* Alinearlo a la izquierda */
+  height: 100vh; /* Para que ocupe el alto completo de la pantalla */
+  overflow-y: hidden; /* Habilita el scroll interno si el contenido es mayor que el viewport */
 }
 
 .sidebar__nav {
@@ -32,7 +43,7 @@ body {
 }
 
 .sidebar__item {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .sidebar__link {
@@ -71,25 +82,96 @@ body {
 
 /* Contenido principal */
 .main-content {
+  margin-left: 25%;
   width: 75%;
   padding: 40px;
 }
 
-.intro {
-  margin-bottom: 30px;
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #cccccc;
 }
 
-.intro__title {
+.intro, .places, .events {
+  background-color: #2c2c2c; /* Fondo oscuro elegante */
+  color: #e0e0e0; /* Color de texto claro */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+
+}
+
+.top__section {
+  display: flex;
+  gap: 20px;
+}
+
+/* Contenedor principal de ambas secciones */
+.top__section {
+  display: flex;
+  gap: 20px; /* Espacio entre los contenedores */
+}
+
+.info__box, .events__box {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+
+.intro__title, .events__title {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .intro__subtitle {
+  display: inline-block;
   font-size: 20px;
   margin-top: 20px;
+  padding-right: 20px;
   margin-bottom: 10px;
 }
 
+.intro__title, .places__title, .events__title {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to right, #222 0%, #54a4ff 25%, #54a4ff  75%, transparent 100%);
+  padding: 10px 20px;
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+
+.intro__subtitle {
+  font-size: 22px;
+  color: #54a4ff;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: 5px;
+  border-bottom: 2px solid #9ac9ff;
+}
+
+
+.intro__text, .events__text {
+  padding-inline: 15px;
+}
+
+.intro__image {
+  width: 100%;
+}
+
+
+/* LUGARES */
 
 .places__article {
   margin-top: 20px;
@@ -97,24 +179,56 @@ body {
   display: flex;
   padding: 10px 0;
   gap: 8px;
-  background-color: rgb(182, 117, 117);
   justify-content: space-around;
 }
 
-.places__block-title {
+
+/* Contenedor de cada lugar */
+.places_box {
+  background-color: #555;
+  border: 2px solid #48b2fd;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.places_box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 128, 255, 0.7);
+}
+
+/* Título de cada lugar */
+.places_box-title {
+  font-size: 22px;
+  font-family: 'Orbitron', sans-serif;
+  color: #9ac9ff;
+  margin-bottom: 8px;
 }
 
 
-.places__block-image {
-  width: 300px;
+/* Descripción de cada lugar */
+.places_box-description {
+  font-size: 16px;
+  color: #cccccc;
+}
+
+
+.places_box-image {
+  width: 350px;
   margin: 10px;
   border-radius: 12px;
 }
 
-.places__block-description {
-  text-align: center;
+
+
+/* Eventos y actividades */
+.events__text {
+  margin-top: 10px;
 }
+
 
 
 .brands {
@@ -130,8 +244,10 @@ body {
 
 /* Footer */
 .footer {
-  text-align: center;
-  padding: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
   background-color: #333;
   color: #fff;
   position: fixed;
@@ -140,5 +256,33 @@ body {
 }
 
 .footer__text {
-  font-size: 14px;
+  font-size: 12px;
+  transform: translateY(50%);
+}
+
+
+
+
+
+
+/*-----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* Imágenes con bordes redondeados y filtro retro */
+.places_box-image {
+  border-radius: 12px;
+  height: auto;
+  transition: filter 0.4s ease;
+}
+
+.places_box-image:hover {
+  filter: sepia(20%) hue-rotate(-10deg) saturate(120%);
 }
