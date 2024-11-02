@@ -94,7 +94,7 @@ p {
   color: #cccccc;
 }
 
-.intro, .places, .events {
+.intro {
   background-color: #2c2c2c; /* Fondo oscuro elegante */
   color: #e0e0e0; /* Color de texto claro */
   padding: 20px;
@@ -105,28 +105,30 @@ p {
 }
 
 .top__section {
-  display: flex;
   gap: 20px;
 }
 
-
-.info__box, .events__box {
+.info__box {
   background-color: #333;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
-  flex: 1;
+}
+
+.intro__content {
+  display: flex;
+
 }
 
 
-.intro__title, .events__title {
+.intro__title {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 
-.intro__title, .places__title, .events__title {
+.intro__title {
   display: inline-block;
   color: rgb(255, 255, 255);
   background: linear-gradient(to right, #222 0%, #54a4ff 25%, #54a4ff  75%, transparent 100%);
@@ -136,7 +138,6 @@ p {
   padding-bottom: 5px;
   padding: 10px 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-
 }
 
 
@@ -144,99 +145,95 @@ p {
   font-size: 22px;
   color: #54a4ff;
   font-weight: bold;
-  margin-top: 15px;
-  margin-left: 5px;
-  margin-bottom: 10px;
+  margin: 20px;
   border-bottom: 2px solid #9ac9ff;
+  text-align: end;
 }
 
 
-.intro__text, .events__text {
-  padding-inline: 15px;
+.intro__text {
+  padding-inline: 20px;
+}
+
+
+
+/* Scroll de imagenes con la dependencia swiper */
+
+.custom-swiper {
+  width: 100%; /* Ajusta el ancho del contenedor */
+  margin: auto; /* Centra el carrusel */
+  overflow: hidden; /* Oculta las imágenes no activas */
+  padding-block: 10px;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .intro__image {
-  width: 100%;
-  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7);
-  border-radius: 12px;
+  width: 95%;
+  height: auto; /* Asegura que las imágenes mantengan su proporción */
+  border-radius: 8px; /* Opcional, para darle un toque estilizado */
 }
 
-
-/* LUGARES */
-
-.places__article {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  padding: 10px 0;
-  gap: 8px;
-  justify-content: space-around;
+.swiper-container {
+  position: relative;
+  max-width: 100%; /* Asegúrate de que el contenedor principal no esté limitado */
+  margin: 0 auto; /* Centra el contenedor */
 }
 
+.swiper-button-prev, .swiper-button-next {
+  color: #000000; /* Cambia el color si es necesario */
+  position: absolute;
+  top: 50%;
+  width: 26px; /* Cambia el tamaño del botón */
+  height: 26px; /* Cambia el tamaño del botón */
+  border-radius: 50%; /* Crea un borde circular */
+  display: flex; /* Para centrar el contenido dentro del botón */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  background-color: rgba(255, 255, 255, 0.5); /* Color de fondo opcional */
+  border: 1px solid #000000; /* Borde opcional */
+  z-index: 10; /* Asegúrate de que se muestren encima de otros elementos */
+}
 
-/* Contenedor de cada lugar */
-.places_box {
-  background-color: #555;
-  border: 2px solid #48b2fd;
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+/* Cambiar el tamaño del icono */
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 16px; /* Ajusta el tamaño del icono */
+  line-height: 24px; /* Centra verticalmente el icono */
+  font-weight: bold;
+}
+
+.swiper-button-prev {
+  left: 0; /* Ajustado al borde izquierdo, permite que sobresalga */
+}
+
+.swiper-button-next {
+  right: 0; /* Ajustado al borde derecho, permite que sobresalga */
+}
+
+.swiper-pagination {
+  color: blue;
+  position: relative;
+  bottom: 10px; /* Espacio debajo de la imagen */
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.places_box:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 15px rgba(0, 128, 255, 0.7);
-}
-
-/* Título de cada lugar */
-.places_box-title {
-  font-size: 22px;
-  font-family: 'Orbitron', sans-serif;
-  color: #9ac9ff;
-  margin-bottom: 8px;
-}
-
-
-/* Descripción de cada lugar */
-.places_box-description {
-  font-size: 16px;
-  color: #cccccc;
-}
-
-
-.places_box-image {
-  width: 350px;
-  margin: 10px;
-  border-radius: 12px;
-  border-radius: 12px;
-  height: auto;
-  transition: filter 0.4s ease;
-}
-
-
-.places_box-image:hover {
-  filter: sepia(20%) hue-rotate(-10deg) saturate(120%);
-}
-
-
-/* Eventos y actividades */
-.events__text {
-  margin-top: 10px;
+  z-index: 10;
 }
 
 
 
-.brands {
-  display: flex;
-  padding: 10px;
-  margin-top: 10px;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-}
+
+/* ------------------------------------------- */
+
+
+
 
 
 
@@ -258,3 +255,17 @@ p {
   transform: translateY(50%);
 }
 
+
+
+
+
+.intro__content > .swiper-container {
+  flex: 0.8; /* Este ocupa más espacio */
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.intro__content-text {
+  flex: 1; /* Este ocupa menos espacio */
+  display: flex;
+  flex-direction: column; /* Asegura que el texto esté en columna */
+}

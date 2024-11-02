@@ -1,0 +1,3 @@
+Añadir el nav con preprocessador HTML
+Añadir enlaces a las tiendas al final de la página
+Añadir slides con la dependencia

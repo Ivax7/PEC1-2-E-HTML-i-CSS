@@ -1,49 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <!-- Sección de introducción -->
-  <section id="intro" class="intro">
-    <h1 class="intro__title">¿Qué es el Triángulo Friki de Barcelona?</h1>
-    <h2 class="intro__subtitle">Introducción e historia</h2>
-    <p class="intro__text">El "Triángulo Friki" de Barcelona es una zona del centro de la ciudad popular entre fans de la cultura geek y alternativa. Este "triángulo" se ubica alrededor de las calles de Arco de Triunfo y el barrio del Born, y en él se concentran tiendas especializadas en cómics, manga, juegos de rol, figuras de colección, merchandising, videojuegos y otros productos para fans de la ciencia ficción, el anime y la fantasía.</p>
-  </section>
+  <title>El Triángulo Friki de Barcelona</title>
   
-  <!-- Sección de lugares de interés -->
-  <section class="places" id="places">
-    <h2 class="places__title">Lugares de interés</h2>
-    
-    <article class="places__article">
-    
-    <!-- Bloque de Calle Bailén -->
-    <div id="calle-bailen" class="places__block">
-      <h3 class="places__block-title">Calle Bailén</h3>
-      <img src="images/calle-bailen.jpeg"alt="Foto de Calle Bailén" class="places__block-image">
-      <p class="places__block-description">Norma Cómics <br> Kaburi</p>
-    </div>
-    
-    <!-- Bloque de Calle Ali Bei y Arco de Triunfo -->
-    <div id="calle-ali-bei" class="places__block">
-      <h3 class="places__block-title">Calle Ali Bei y Arco de Triunfo</h3>
-      <img src="images/calle-ali-bei.jpg" alt="Foto de Calle Ali Bei y Arco de Triunfo" class="places__block-image">
-      <p class="places__block-description">Fnac Triangle</p>
-    </div>
-    
-    <!-- Bloque de El Born y Passeig de Sant Joan -->
-    <div id="el-born" class="places__block">
-      <h3 class="places__block-title">El Born y Passeig de Sant Joan</h3>
-      <img src="images/el-born.jpg" alt="Foto de El Born y Passeig de Sant Joan" class="places__block-image">
-      <p class="places__block-description">Continuará Cómics <br>  El Born</p>
-    </div>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   
-    </article>
-  </section>
-
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Nav lateral -->
+  <aside class="sidebar">
+    <nav class="sidebar__nav">
+      <ul class="sidebar__list">
+        <li class="sidebar__item">
+          <a href="#intro" class="sidebar__link">¿Qué es el Triángulo Friki de Barcelona?</a>
+          <ul class="sidebar__sublist">
+            <li class="sidebar__subitem"><a href="#introduccion-historia" class="sidebar__link">Introducción</a></li>
+            <li class="sidebar__subitem"><a href="#introduccion-historia" class="sidebar__link">Historia</a></li>
+            <li class="sidebar__subitem"><a href="#introduccion-historia" class="sidebar__link">Comunidad</a></li>
+            <li class="sidebar__subitem"><a href="#lugares-de-interes" class="sidebar__link">Lugares de interés</a></li>
+          </ul>
+        </li>
   
+        <li class="sidebar__item">
+          <a href="sub-pages/bailen.html" class="sidebar__link">Calle Bailén</a>
+          <ul class="sidebar__sublist">
+            <li class="sidebar__subitem"><a href="#norma-comics" class="sidebar__link">Norma Comics</a></li>
+            <li class="sidebar__subitem"><a href="#kaburi" class="sidebar__link">Kaburi</a></li>
+          </ul>
+        </li>
+  
+        <li class="sidebar__item">
+          <a href="#calle-ali-bei" class="sidebar__link">Calle Ali Bei y zona del Arco de Triunfo</a>
+          <ul class="sidebar__sublist">
+            <li class="sidebar__subitem"><a href="#fnac-triangle" class="sidebar__link">Fnac Triangle</a></li>
+          </ul>
+        </li>
+  
+        <li class="sidebar__item">
+          <a href="#el-born" class="sidebar__link">El Born y Passeig de Sant Joan</a>
+          <ul class="sidebar__sublist">
+            <li class="sidebar__subitem"><a href="#continuara-comics" class="sidebar__link">Continuará Comics</a></li>
+            <li class="sidebar__subitem"><a href="#el-borne" class="sidebar__link">El Borne</a></li>
+          </ul>
+        </li>
+  
+        <li class="sidebar__item">
+          <a href="#eventos" class="sidebar__link">Eventos y actividades</a>
+        </li>
+      </ul>
+    </nav>
+
+  
+    <iframe frameBorder="0" scrolling="no" src="https://es.wikiloc.com/wikiloc/embedv2.do?id=142601366&elevation=off&images=off&maptype=H" width="430" height="500" border-radius="12px"></iframe><div style="color:#777;font-size:11px;line-height:16px;">Powered by&nbsp;<a style="color:#4C8C2B;font-size:11px;line-height:16px;" target="_blank" href="https://es.wikiloc.com">Wikiloc</a></div>
+    
+  </aside>
+  
+
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    
+    <!-- Sección de introducción -->
+    <section id="intro" class="intro">
+      
+      <h1 class="intro__title">Calle Bailén</h1>
+      
+      <section class="top__section">
+
+        <div class="info__box">
+          <article class="intro__content">
+            <div class="swiper-container custom-swiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <img class="intro__image" src="/src/sub-pages/images/norma1.jpg" alt="Calle Bailen">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="intro__image" src="/src/sub-pages/images/norma2.jpg" alt="Calle Bailen">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="intro__image" src="/src/sub-pages/images/norma3.jpg" alt="Calle Bailen">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="intro__image" src="/src/sub-pages/images/norma4.jpg" alt="Calle Bailen">
+                  </div>
+              </div>
+              <!-- Botones de navegación -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <!-- Paginación -->
+              <div class="swiper-pagination"></div>
+          </div>
+          
+
+            
+
+
+
+
+            <div class="intro__content-text">
+              <h2 class="intro__subtitle">Norma Comics</h2>
+              <p class="intro__text">
+                Una de las tiendas de cómics más grandes y conocidas de Barcelona, ofrece una amplia selección de cómics, manga, novelas gráficas, figuras y merchandising. Es una parada imprescindible para los fans de la cultura pop. <br>
+                Esta tienda es conocida como un referente en la escena de cómics y cultura pop en Barcelona. Ha sido galardonada con múltiples premios por su dedicación a la promoción de la literatura gráfica y el cómic, destacándose como una de las más completas y mejor surtidas de Europa. Norma Cómics no solo ofrece una enorme variedad de cómics y mangas en varios idiomas, sino que también organiza exposiciones, firmas de autores y eventos especiales que fortalecen la comunidad geek en la ciudad.
+              </p>
+            </div>
+          </article>
+        </div>
+        
+
+      </section>
+
+      <section class="top__section">
+
+        <div class="info__box">
+          <article class="intro__content">
+
+            <div class="intro__content-text">
+              <h2 class="intro__subtitle">Kaburi</h2>
+              <p class="intro__text">
+                Tienda y cafetería especializada en juegos de mesa, juegos de rol y otros juegos de estrategia. Ofrece un espacio para jugar y suele organizar eventos de juegos. <br>
+                Kaburi es un punto de encuentro para los aficionados a los juegos de mesa y de rol. Su combinación de tienda y cafetería lúdica la convierte en un espacio único donde los clientes pueden disfrutar de partidas mientras se toman algo. Además, Kaburi es conocida por organizar torneos, talleres y sesiones de demostración de nuevos juegos, lo que la hace un lugar de referencia para los amantes de los juegos de estrategia y rol.
+              </p>
+            </div>
+            <div class="swiper-container custom-swiper">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <img class="intro__image" src="/src/sub-pages/images/norma1.jpg" alt="Calle Bailen">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="intro__image" src="/src/sub-pages/images/norma2.jpg" alt="Calle Bailen">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="intro__image" src="/src/sub-pages/images/norma3.jpg" alt="Calle Bailen">
+                  </div>
+                  <div class="swiper-slide">
+                      <img class="intro__image" src="/src/sub-pages/images/norma4.jpg" alt="Calle Bailen">
+                  </div>
+              </div>
+              <!-- Botones de navegación -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <!-- Paginación -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </article>
+        </div>
+        
+
+      </section>
+    </section>
+      
+
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__text">© 2024 Triángulo Friki de Barcelona</p>
+  </footer>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
