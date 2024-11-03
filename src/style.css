@@ -6,28 +6,24 @@
 }
 
 body {
-  font-family: 'Orbitron', sans-serif; /* Alternativa retro */
+  font-family: 'Orbitron', sans-serif;
   display: flex;
   background-color: #414141;
 }
 
 /* Nav lateral */
 
-/* Estilos generales para el sidebar */
 .sidebar {
-  width: 25%; /* Ancho inicial para pantallas grandes */
-  position: relative; /* Cambiado a relativo */
+  background-color: #f0f0f0;
+  width: 25%;
   font-size: 18px;
   padding: 30px;
-  top: 0; /* Se mantiene la posición en la parte superior */
-  height: auto; /* Ajustar la altura automáticamente */
-  min-height: 100vh; /* Asegura que el sidebar ocupe al menos toda la altura de la pantalla */
-  overflow-y: auto; /* Permite desplazamiento si el contenido excede la altura */
-  background-color: #f0f0f0; /* Color de fondo del sidebar */
-  border-right: 1px solid #ddd; /* Borde derecho */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
 }
-
-
 
 .sidebar__nav {
   display: flex;
@@ -60,7 +56,7 @@ body {
   margin-block: 15px;
   list-style: none;
   padding: 5px 0;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .sidebar__subitem {
@@ -75,6 +71,7 @@ a {
 .sidebar__link {
   color: #333;  
   transition: all 0.2s ease-in-out;
+  
 }
 
 .sidebar__link:hover {
@@ -91,10 +88,20 @@ a {
 }
 
 
+
+/* Mapa */
+.map {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+}
+
+
 /* Contenido principal */
 .main-content {
   width: 75%;
-  padding: 40px;
+  margin-left: 25%;
+  padding: 20px;
 }
 
 p {
@@ -106,8 +113,8 @@ p {
 }
 
 .intro, .places, .events {
-  background-color: #2c2c2c; /* Fondo oscuro elegante */
-  color: #e0e0e0; /* Color de texto claro */
+  background-color: #2c2c2c;
+  color: #e0e0e0;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -132,7 +139,6 @@ p {
 
 
 .intro__title, .events__title {
-  font-size: 24px;
   margin-bottom: 10px;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 
@@ -144,7 +150,7 @@ p {
   color: rgb(255, 255, 255);
   background: linear-gradient(to right, #222 0%, #54a4ff 25%, #54a4ff  75%, transparent 100%);
   padding: 10px 20px;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   padding-bottom: 5px;
   padding: 10px 20px;
@@ -239,6 +245,17 @@ p {
 
 
 /* Eventos y actividades */
+
+.events {
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.events__box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .events__text {
   margin-top: 10px;
 }
@@ -247,6 +264,7 @@ p {
 
 .brands {
   display: flex;
+  flex-wrap: wrap;
   padding: 10px;
   margin-top: 10px;
   justify-content: space-around;
@@ -254,7 +272,10 @@ p {
   text-align: center;
 }
 
-.brands__logo{
+.brands__logo {
+  height: 120px;
+  margin: 10px;
+  max-width: 100%;
   border-radius: 12px;
   transition: all 0.2s ease-in-out;
 }
@@ -265,12 +286,13 @@ p {
 
 
 
+
 /* Footer */
 .footer {
   position: relative;
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center;
+  align-items: center;
   background-color: #333;
   color: #fff;
   position: fixed;
@@ -287,248 +309,136 @@ p {
 
 
 
-/* Estilos para dispositivos móviles (pantallas menores a 768px) */
+/* Móviles */
+
 @media (max-width: 768px) {
   /* Lateral */
   .sidebar {
-    width: 100%; /* Ocupa el ancho completo */
-    position: relative; /* Cambia de fijo a relativo */
-    height: auto; /* Permite que el alto se ajuste al contenido */
-    border-right: none; /* Quita el borde derecho */
+    width: 100%;
+    position: relative;
+    height: auto;
+    border-right: none;
   }
 
   .main-content {
-    margin-left: 0; /* Quita el margen izquierdo */
-    width: 100%; /* Ocupa el ancho completo */
-    padding: 20px; /* Reduce el padding */
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
   }
 
   .sidebar__nav {
-    flex-direction: column; /* Asegura que el menú sea vertical */
+    flex-direction: column;
   }
 
-  /* Ajustar las imágenes dentro de los cuadros de lugares */
   .places_box-image {
-    width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
+    width: 100%;
+    height: auto;
   }
 
-  /* Ajustar las cajas de información */
   .info__box {
-    flex-direction: column; /* Asegura que las cajas se apilen verticalmente */
+    flex-direction: column;
   }
 
   .top__section {
-    flex-direction: column; /* Asegura que las secciones se apilen verticalmente */
-    gap: 10px; /* Espaciado más pequeño entre las cajas */
+    flex-direction: column;
+    gap: 10px;
   }
 
   .brands {
-    flex-direction: column; /* Asegura que los logos se apilen verticalmente */
-    align-items: center; /* Centra los logos */
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 /* Estilos para tabletas (pantallas de 768px a 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Lateral */
+
   .sidebar {
-    width: 30%; /* Reduce el ancho para que se ajuste mejor */
+    width: 30%;
   }
 
   .main-content {
-    margin-left: 30%; /* Alinea el contenido principal junto a la barra lateral */
-    width: 70%; /* Mantiene el contenido principal en el 70% */
-    padding: 30px; /* Mantiene el padding */
+    margin-left: 30%;
+    width: 70%;
+    padding: 30px;
   }
 
   .top__section {
-    flex-direction: row; /* Mantiene las secciones en fila */
+    flex-direction: row;
   }
 
   .places__article {
-    flex-direction: column; /* Apila los lugares verticalmente en pantallas más pequeñas */
+    flex-direction: column;
   }
 
   .places_box {
-    width: 100%; /* Asegura que las cajas de lugar ocupen todo el ancho */
-    margin-bottom: 20px; /* Espaciado entre las cajas */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .brands {
-    flex-wrap: wrap; /* Permite que los logos se envuelvan si no caben en la línea */
+    flex-wrap: wrap;
   }
 
   .brands__logo {
-    width: 80%; /* Asegura que los logos no sean demasiado grandes */
-    margin: 5px; /* Espaciado entre los logos */
+    width: 80%;
+    margin: 5px;
   }
 }
 
-/* Estilos adicionales */
-.sidebar__sublink {
-  font-size: 14px; /* Ajustar el tamaño del texto de los enlaces secundarios en móviles */
-}
 
-.intro__title, .places__title, .events__title {
-  font-size: 22px; /* Reducir tamaño del título en móviles */
-}
-
-
-
-
-/* Estilos generales */
-.sidebar {
-  position: relative; /* Cambiado a relativo */
-  height: auto; /* Permite que el alto se ajuste al contenido */
-  border-right: none; /* Quita el borde derecho en móviles */
-}
-
-.main-content {
-  padding: 20px; /* Padding general */
-}
-
-
-/* Estilos para dispositivos móviles (pantallas menores a 768px) */
+/* Móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
 
   body {
     flex-direction: column;
   }
   .sidebar {
-    width: 100%; /* Ocupa el ancho completo */
+    width: 100%;
+    position: relative;
   }
 
   .main-content {
-    margin-left: 0; /* Quita el margen izquierdo */
-    width: 100%; /* Ocupa el ancho completo */
+    width: 100%;
   }
 
-
-  /* Ajustar imágenes y cajas */
-  .places_box-image,
   .places_box {
-    width: 100%; /* Las imágenes y cajas ocupan todo el ancho del contenedor */
+    width: 100%;
+  }
+  .places_box-image {
+    width: 90%;
   }
 
   .info__box,
   .top__section {
-    flex-direction: column; /* Apila las secciones verticalmente */
-    gap: 10px; /* Espaciado entre las cajas */
+    flex-direction: column;
+    gap: 10px;
   }
 
   .brands {
-    flex-direction: column; /* Asegura que los logos se apilen verticalmente */
-    align-items: center; /* Centra los logos */
+    flex-direction: column;
+    align-items: center;
   }
 
-
-}
-
-
-
-
-/* Estilos para tabletas (pantallas de 768px a 1024px) */
-@media (min-width: 768px) and (max-width: 1196px){
-  .sidebar {
-    width: 25%; /* Reduce el ancho para que se ajuste mejor */
-  }
-
-  .main-content {
-    margin-left: 0; /* Alinea el contenido principal junto a la barra lateral */
-    width: 75%; /* Mantiene el contenido principal en el 70% */
-    padding: 30px; /* Mantiene el padding */
-  }
-
-  .top__section {
-    flex-direction: column; /* Mantiene las secciones en fila */
-  }
-
-  .places__article {
-    flex-direction: column; /* Apila los lugares verticalmente en pantallas más pequeñas */
-  }
-  /* Ajustar imágenes y cajas */
-  .places_box-image,
-  .places_box {
-    width: 100%; /* Las imágenes y cajas ocupan todo el ancho del contenedor */
-  }
-  .brands {
-    flex-wrap: wrap; /* Permite que los logos se envuelvan si no caben en la línea */
-  }
-
-  .brands__logo {
-    width: 80%; /* Asegura que los logos no sean demasiado grandes */
-    margin: 5px; /* Espaciado entre los logos */
-  }
-}
-
-/* Estilos para el mapa */
-.map {
-  width: 100%; /* Ancho del mapa ocupa el 100% del contenedor */
-  max-width: 800px; /* Ancho máximo si es necesario */
-  border-radius: 12px; /* Borde redondeado */
-}
-
-@media (max-width: 768px) {
   .map {
-    height: 300px; /* Ajustar la altura para pantallas más pequeñas */
+    height: 300px;
   }
   .brands__logo {
-    height: 100px; /* Reducir la altura en pantallas pequeñas */
+    height: 100px;
   }
 }
 
 
-@media (max-width: 1000px) {
-  body {
+@media (max-width: 1300px) {
+  .top__section {
     flex-direction: column;
   }
-
-  .sidebar {
-    width: 100%; /* Ocupa el ancho completo */
-  }
-
-  .main-content {
-    margin-left: 0; /* Quita el margen izquierdo */
-    width: 100%; /* Ocupa el ancho completo */
-  }
-
 }
 
-/* Sección de eventos */
-.events {
-  display: flex; /* Usar flexbox para la disposición de la sección de eventos */
-  flex-direction: column; /* Apilar verticalmente los elementos */
-  align-items: center; /* Centrar el contenido */
-  margin: 20px 0; /* Espaciado vertical para la sección */
-}
-
-.events__box {
-  text-align: center; /* Centrar el texto en la caja de eventos */
-  margin-bottom: 20px; /* Espaciado inferior para la caja de eventos */
-}
-
-.brands {
-  display: flex; /* Usar flexbox para la disposición de las marcas */
-  flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en nuevas líneas */
-  justify-content: center; /* Centrar las marcas */
-}
-
-.brands__logo {
-  height: 120px; /* Altura fija para los logos */
-  margin: 10px; /* Espaciado entre logos */
-  max-width: 100%; /* Asegurarse que no se desborden */
-}
-
-
-
-
-
-/* Ajustes para pantallas menores a 1024px */
+/* Ajustes para pantallas menores a 1800px */
 @media (max-width: 1800px) {
-
   .places__article {
-    flex-direction: row; /* Apila los lugares verticalmente en pantallas más pequeñas */
+    flex-direction: row; 
     flex-wrap: wrap;
   }
 }
