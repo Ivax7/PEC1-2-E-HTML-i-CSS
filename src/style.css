@@ -25,6 +25,12 @@ body {
   overflow-y: auto;
 }
 
+/* Ocultar la barra de scroll en navegadores basados en Webkit */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+
 .sidebar__nav {
   display: flex;
   flex-direction: column;
