@@ -12,24 +12,22 @@ body {
 }
 
 /* Nav lateral */
+
+/* Estilos generales para el sidebar */
 .sidebar {
-  width: 25%;
-  background-color: #f0f0f0;
-  padding: 25px 30px;
-  padding-right: 0;
-  border-right: 1px solid #ddd;
+  width: 25%; /* Ancho inicial para pantallas grandes */
+  position: relative; /* Cambiado a relativo */
   font-size: 18px;
+  padding: 30px;
+  top: 0; /* Se mantiene la posición en la parte superior */
+  height: auto; /* Ajustar la altura automáticamente */
+  min-height: 100vh; /* Asegura que el sidebar ocupe al menos toda la altura de la pantalla */
+  overflow-y: auto; /* Permite desplazamiento si el contenido excede la altura */
+  background-color: #f0f0f0; /* Color de fondo del sidebar */
+  border-right: 1px solid #ddd; /* Borde derecho */
 }
 
-/* Nav lateral */
-.sidebar {
-  font-size: 18px;
-  position: fixed; /* Hacer el nav fijo */
-  top: 0; /* Fijarlo a la parte superior de la ventana */
-  left: 0; /* Alinearlo a la izquierda */
-  height: 100vh; /* Para que ocupe el alto completo de la pantalla */
-  overflow-y: hidden; /* Habilita el scroll interno si el contenido es mayor que el viewport */
-}
+
 
 .sidebar__nav {
   display: flex;
@@ -59,7 +57,7 @@ body {
 
 /* Nav sublista */
 .sidebar__sublist {
-  margin-left: 15px;
+  margin-block: 15px;
   list-style: none;
   padding: 5px 0;
   font-size: 13px;
@@ -70,19 +68,31 @@ body {
   margin-bottom: 10px;
 }
 
-.sidebar__link {
+a {
   text-decoration: none;
-  color: #333;
+}
+
+.sidebar__link {
+  color: #333;  
+  transition: all 0.2s ease-in-out;
 }
 
 .sidebar__link:hover {
   color: #0077cc;
 }
 
+.sidebar__sublink {
+  color: #797979;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar__sublink:hover {
+  color: #0077cc;
+}
+
 
 /* Contenido principal */
 .main-content {
-  margin-left: 25%;
   width: 75%;
   padding: 40px;
 }
@@ -92,6 +102,7 @@ p {
   line-height: 1.6;
   margin-bottom: 15px;
   color: #cccccc;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .intro, .places, .events {
@@ -123,6 +134,8 @@ p {
 .intro__title, .events__title {
   font-size: 24px;
   margin-bottom: 10px;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+
 }
 
 
@@ -136,7 +149,6 @@ p {
   padding-bottom: 5px;
   padding: 10px 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-
 }
 
 
@@ -148,6 +160,7 @@ p {
   margin-left: 5px;
   margin-bottom: 10px;
   border-bottom: 2px solid #9ac9ff;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -180,6 +193,7 @@ p {
   border: 2px solid #48b2fd;
   border-radius: 15px;
   padding: 15px;
+  margin-bottom: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -197,6 +211,8 @@ p {
   font-family: 'Orbitron', sans-serif;
   color: #9ac9ff;
   margin-bottom: 8px;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+
 }
 
 
@@ -238,6 +254,15 @@ p {
   text-align: center;
 }
 
+.brands__logo{
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.brands__logo:hover {
+  transform: scale(1.1);
+}
+
 
 
 /* Footer */
@@ -257,4 +282,256 @@ p {
   font-size: 12px;
   transform: translateY(50%);
 }
+
+
+
+
+
+/* Estilos para dispositivos móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+  /* Lateral */
+  .sidebar {
+    width: 100%; /* Ocupa el ancho completo */
+    position: relative; /* Cambia de fijo a relativo */
+    height: auto; /* Permite que el alto se ajuste al contenido */
+    border-right: none; /* Quita el borde derecho */
+  }
+
+  .main-content {
+    margin-left: 0; /* Quita el margen izquierdo */
+    width: 100%; /* Ocupa el ancho completo */
+    padding: 20px; /* Reduce el padding */
+  }
+
+  .sidebar__nav {
+    flex-direction: column; /* Asegura que el menú sea vertical */
+  }
+
+  /* Ajustar las imágenes dentro de los cuadros de lugares */
+  .places_box-image {
+    width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+  }
+
+  /* Ajustar las cajas de información */
+  .info__box {
+    flex-direction: column; /* Asegura que las cajas se apilen verticalmente */
+  }
+
+  .top__section {
+    flex-direction: column; /* Asegura que las secciones se apilen verticalmente */
+    gap: 10px; /* Espaciado más pequeño entre las cajas */
+  }
+
+  .brands {
+    flex-direction: column; /* Asegura que los logos se apilen verticalmente */
+    align-items: center; /* Centra los logos */
+  }
+}
+
+/* Estilos para tabletas (pantallas de 768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Lateral */
+  .sidebar {
+    width: 30%; /* Reduce el ancho para que se ajuste mejor */
+  }
+
+  .main-content {
+    margin-left: 30%; /* Alinea el contenido principal junto a la barra lateral */
+    width: 70%; /* Mantiene el contenido principal en el 70% */
+    padding: 30px; /* Mantiene el padding */
+  }
+
+  .top__section {
+    flex-direction: row; /* Mantiene las secciones en fila */
+  }
+
+  .places__article {
+    flex-direction: column; /* Apila los lugares verticalmente en pantallas más pequeñas */
+  }
+
+  .places_box {
+    width: 100%; /* Asegura que las cajas de lugar ocupen todo el ancho */
+    margin-bottom: 20px; /* Espaciado entre las cajas */
+  }
+
+  .brands {
+    flex-wrap: wrap; /* Permite que los logos se envuelvan si no caben en la línea */
+  }
+
+  .brands__logo {
+    width: 80%; /* Asegura que los logos no sean demasiado grandes */
+    margin: 5px; /* Espaciado entre los logos */
+  }
+}
+
+/* Estilos adicionales */
+.sidebar__sublink {
+  font-size: 14px; /* Ajustar el tamaño del texto de los enlaces secundarios en móviles */
+}
+
+.intro__title, .places__title, .events__title {
+  font-size: 22px; /* Reducir tamaño del título en móviles */
+}
+
+
+
+
+/* Estilos generales */
+.sidebar {
+  position: relative; /* Cambiado a relativo */
+  height: auto; /* Permite que el alto se ajuste al contenido */
+  border-right: none; /* Quita el borde derecho en móviles */
+}
+
+.main-content {
+  padding: 20px; /* Padding general */
+}
+
+
+/* Estilos para dispositivos móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%; /* Ocupa el ancho completo */
+  }
+
+  .main-content {
+    margin-left: 0; /* Quita el margen izquierdo */
+    width: 100%; /* Ocupa el ancho completo */
+  }
+
+
+  /* Ajustar imágenes y cajas */
+  .places_box-image,
+  .places_box {
+    width: 100%; /* Las imágenes y cajas ocupan todo el ancho del contenedor */
+  }
+
+  .info__box,
+  .top__section {
+    flex-direction: column; /* Apila las secciones verticalmente */
+    gap: 10px; /* Espaciado entre las cajas */
+  }
+
+  .brands {
+    flex-direction: column; /* Asegura que los logos se apilen verticalmente */
+    align-items: center; /* Centra los logos */
+  }
+
+
+}
+
+
+
+
+/* Estilos para tabletas (pantallas de 768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1196px){
+  .sidebar {
+    width: 25%; /* Reduce el ancho para que se ajuste mejor */
+  }
+
+  .main-content {
+    margin-left: 0; /* Alinea el contenido principal junto a la barra lateral */
+    width: 75%; /* Mantiene el contenido principal en el 70% */
+    padding: 30px; /* Mantiene el padding */
+  }
+
+  .top__section {
+    flex-direction: column; /* Mantiene las secciones en fila */
+  }
+
+  .places__article {
+    flex-direction: column; /* Apila los lugares verticalmente en pantallas más pequeñas */
+  }
+  /* Ajustar imágenes y cajas */
+  .places_box-image,
+  .places_box {
+    width: 100%; /* Las imágenes y cajas ocupan todo el ancho del contenedor */
+  }
+  .brands {
+    flex-wrap: wrap; /* Permite que los logos se envuelvan si no caben en la línea */
+  }
+
+  .brands__logo {
+    width: 80%; /* Asegura que los logos no sean demasiado grandes */
+    margin: 5px; /* Espaciado entre los logos */
+  }
+}
+
+/* Estilos para el mapa */
+.map {
+  width: 100%; /* Ancho del mapa ocupa el 100% del contenedor */
+  max-width: 800px; /* Ancho máximo si es necesario */
+  border-radius: 12px; /* Borde redondeado */
+}
+
+@media (max-width: 768px) {
+  .map {
+    height: 300px; /* Ajustar la altura para pantallas más pequeñas */
+  }
+  .brands__logo {
+    height: 100px; /* Reducir la altura en pantallas pequeñas */
+  }
+}
+
+
+@media (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%; /* Ocupa el ancho completo */
+  }
+
+  .main-content {
+    margin-left: 0; /* Quita el margen izquierdo */
+    width: 100%; /* Ocupa el ancho completo */
+  }
+
+}
+
+/* Sección de eventos */
+.events {
+  display: flex; /* Usar flexbox para la disposición de la sección de eventos */
+  flex-direction: column; /* Apilar verticalmente los elementos */
+  align-items: center; /* Centrar el contenido */
+  margin: 20px 0; /* Espaciado vertical para la sección */
+}
+
+.events__box {
+  text-align: center; /* Centrar el texto en la caja de eventos */
+  margin-bottom: 20px; /* Espaciado inferior para la caja de eventos */
+}
+
+.brands {
+  display: flex; /* Usar flexbox para la disposición de las marcas */
+  flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en nuevas líneas */
+  justify-content: center; /* Centrar las marcas */
+}
+
+.brands__logo {
+  height: 120px; /* Altura fija para los logos */
+  margin: 10px; /* Espaciado entre logos */
+  max-width: 100%; /* Asegurarse que no se desborden */
+}
+
+
+
+
+
+/* Ajustes para pantallas menores a 1024px */
+@media (max-width: 1800px) {
+
+  .places__article {
+    flex-direction: row; /* Apila los lugares verticalmente en pantallas más pequeñas */
+    flex-wrap: wrap;
+  }
+}
+
+
 

@@ -73,11 +73,23 @@ body {
 .sidebar__link {
   text-decoration: none;
   color: #333;
+  transition: all 0.2s ease-in-out;
 }
 
 .sidebar__link:hover {
   color: #0077cc;
 }
+
+.sidebar__sublink {
+  text-decoration: none;
+  color: #797979;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar__sublink:hover {
+  color: #0077cc;
+}
+
 
 
 /* Contenido principal */
@@ -92,6 +104,7 @@ p {
   line-height: 1.6;
   margin-bottom: 15px;
   color: #cccccc;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .intro {
@@ -123,21 +136,17 @@ p {
 
 
 .intro__title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-
-.intro__title {
   display: inline-block;
   color: rgb(255, 255, 255);
   background: linear-gradient(to right, #222 0%, #54a4ff 25%, #54a4ff  75%, transparent 100%);
   padding: 10px 20px;
   font-size: 28px;
   font-weight: bold;
+  margin-bottom: 10px;
   padding-bottom: 5px;
   padding: 10px 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -148,6 +157,7 @@ p {
   margin: 20px;
   border-bottom: 2px solid #9ac9ff;
   text-align: end;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -233,6 +243,10 @@ p {
 /* ------------------------------------------- */
 
 
+b {
+  color: #f8f8f8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
 
 
