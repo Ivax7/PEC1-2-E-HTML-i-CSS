@@ -370,7 +370,7 @@ p {
   }
 }
 
-@media (width <= 1300px) {
+@media (width <= 1196px) {
   .top__section {
     flex-direction: column;
   }
