@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #414141;
+  font-family: Orbitron, sans-serif;
+  display: flex;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar__nav {
+  flex-direction: column;
+  display: flex;
+}
+
+.sidebar__list {
+  list-style: none;
+}
+
+.sidebar__item {
+  margin-bottom: 10px;
+}
+
+.sidebar__link {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sidebar__sublist {
+  margin-left: 15px;
+  padding: 5px 0;
+  font-size: 13px;
+  list-style: none;
+}
+
+.sidebar__subitem {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.sidebar__link {
+  color: #333;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+.sidebar__link:hover {
+  color: #07c;
+}
+
+.sidebar__sublink {
+  color: #797979;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+.sidebar__sublink:hover {
+  color: #07c;
+}
+
+.map {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+}
+
+body {
+  background-color: #f5f5f5;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.sidebar {
+  background-color: #f0f0f0;
+  width: 25%;
+  height: 100vh;
+  padding: 30px;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 50%;
+  margin-left: 25%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  position: relative;
+  box-shadow: 0 0 10px #0000001a;
+}
+
+.container p {
+  padding-block: 5px;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  padding: 10px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  color: #06c;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+a:hover {
+  color: #003468;
+}
+
+@media (width <= 768px) {
+  .sidebar {
+    border-right: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .container {
+    width: 100%;
+    margin: 50px;
+    padding: 20px;
+  }
+}
+
+@media (width <= 1196px) {
+  body {
+    flex-direction: column;
+  }
+
+  .map {
+    height: 300px;
+  }
+}
+/*# sourceMappingURL=documentation.1b4cbc44.css.map */
