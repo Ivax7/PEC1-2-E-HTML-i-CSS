@@ -1,0 +1,19 @@
+:root {
+  --background-dark: #414141;
+  --background-light: #f0f0f0;
+  --background-medium: #2c2c2c;
+  --background-box: #555;
+  --text-dark: #333;
+  --text-light: #ccc;
+  --text-white: #fff;
+  --highlight-blue: #07c;
+  --accent-blue: #54a4ff;
+  --accent-light-blue: #54a4ff;
+  --accent-border: #9ac9ff;
+  --shadow-medium: #00000080;
+  --shadow-hover: #0080ffb3;
+  --shadow-red: #ff0000b3;
+  --box-shadow: #0006;
+  --gradient-dark: #222;
+}
+/*# sourceMappingURL=index.96894c7d.css.map */
