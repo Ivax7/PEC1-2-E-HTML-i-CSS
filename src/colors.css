@@ -1,0 +1,26 @@
+/* Paleta de colores */
+
+:root {
+
+  /* Básicos */
+  --background-dark: #414141;
+  --background-light: #f0f0f0;
+  --background-medium: #2c2c2c;
+  --background-box: #555;
+  --text-dark: #333;
+  --text-light: #cccccc;
+  --text-white: #ffffff;
+  --highlight-blue: #0077cc;
+  --accent-blue: #54a4ff;
+  --accent-light-blue: #54a4ff;
+  --accent-border: #9ac9ff;
+
+  /* Sombras */
+  --shadow-medium: rgba(0, 0, 0, 0.5);
+  --shadow-hover: rgba(0, 128, 255, 0.702);
+  --shadow-red: rgba(255, 0, 0, 0.7);
+  --box-shadow: rgba(0, 0, 0, 0.4);
+
+  /* Gradientes */
+  --gradient-dark: #222;
+}

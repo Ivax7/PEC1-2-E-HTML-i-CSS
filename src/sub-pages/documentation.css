@@ -8,14 +8,13 @@
 body {
   font-family: 'Orbitron', sans-serif;
   display: flex;
-  background-color: #414141;
 }
 
 /* Nav lateral */
 
 /* Nav lateral */
 .sidebar {
-  background-color: #f0f0f0;
+  background-color: var(--background-light);
   width: 25%;
   font-size: 18px;
   padding: 30px;
@@ -49,12 +48,12 @@ body {
 
 .sidebar__link {
   text-decoration: none;
-  color: #333;
+  color: var(--text-dark);
   font-weight: bold;
 }
 
 .sidebar__link:hover {
-  color: #0077cc;
+  color: var(--highlight-blue);
 }
 
 
@@ -73,22 +72,22 @@ body {
 
 .sidebar__link {
   text-decoration: none;
-  color: #333;
+  color: var(--text-dark);
   transition: all 0.2s ease-in-out;
 }
 
 .sidebar__link:hover {
-  color: #0077cc;
+  color: var(--highlight-blue);
 }
 
 .sidebar__sublink {
   text-decoration: none;
-  color: #797979;
+  color: var(--background-box);
   transition: all 0.2s ease-in-out;
 }
 
 .sidebar__sublink:hover {
-  color: #0077cc;
+  color: var(--highlight-blue);
 }
 
 /* Mapa */
@@ -98,20 +97,16 @@ body {
   border-radius: 12px;
 }
 
-
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #f5f5f5;
 }
 
 /* Nav lateral */
 .sidebar {
-  background-color: #f0f0f0;
   width: 25%;
   font-size: 18px;
   padding: 30px;
@@ -122,16 +117,13 @@ body {
   overflow-y: auto;
 }
 
-
-
 /* Contenido principal */
 .container {
   margin-left: 25%;
   position: relative;
   width: 50%;
   padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--box-shadow);
   border-radius: 8px;
   font-family: Arial, sans-serif;
 }
@@ -143,7 +135,7 @@ body {
 }
 
 h1 {
-  color: #333;
+  color: var(--text-dark);
   text-align: center;
   padding: 10px;
 }
@@ -158,19 +150,14 @@ li {
 }
 
 a {
-  color: #0066cc;
+  color: var(--accent-light-blue);
   text-decoration: none;
   transition: all .2s ease-in-out;
 }
 
 a:hover {
-  color: #003468;
+  color: var(--highlight-blue);
 }
-
-
-
-
-
 
 /* Móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
@@ -189,7 +176,7 @@ a:hover {
 
 }
 
-
+/* Tablets (pantallas menores a 1800px) */
 @media (max-width: 1196px) {
 
   body {

@@ -8,13 +8,13 @@
 body {
   font-family: 'Orbitron', sans-serif;
   display: flex;
-  background-color: #414141;
+  background-color: var(--background-dark);
 }
 
 /* Nav lateral */
 
 .sidebar {
-  background-color: #f0f0f0;
+  background-color: var(--background-light);
   width: 25%;
   font-size: 18px;
   padding: 30px;
@@ -48,21 +48,20 @@ body {
 
 .sidebar__link {
   text-decoration: none;
-  color: #333;
+  color: var(--text-dark);
   font-weight: bold;
 }
 
 .sidebar__link:hover {
-  color: #0077cc;
+  color: var(--highlight-blue);
 }
-
 
 /* Nav sublista */
 .sidebar__sublist {
-  margin-block: 15px;
+  margin-left: 15px;
   list-style: none;
   padding: 5px 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .sidebar__subitem {
@@ -75,24 +74,22 @@ a {
 }
 
 .sidebar__link {
-  color: #333;  
+  color: var(--text-dark);  
   transition: all 0.2s ease-in-out;
-  
 }
 
 .sidebar__link:hover {
-  color: #0077cc;
+  color: var(--highlight-blue);
 }
 
 .sidebar__sublink {
-  color: #797979;
+  color: var(--background-box);
   transition: all 0.2s ease-in-out;
 }
 
 .sidebar__sublink:hover {
-  color: #0077cc;
+  color: var(--highlight-blue);
 }
-
 
 
 /* Mapa */
@@ -115,7 +112,7 @@ p {
   line-height: 1.6;
   margin-bottom: 15px;
   color: #cccccc;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px var(--shadow-medium);
 }
 
 .intro, .places, .events {
@@ -124,7 +121,7 @@ p {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 15px var(--shadow-medium);
 
 }
 
@@ -138,7 +135,7 @@ p {
   background-color: #333;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px var(--shadow-medium);
   margin-bottom: 15px;
   flex: 1;
 }
@@ -146,33 +143,33 @@ p {
 
 .intro__title, .events__title {
   margin-bottom: 10px;
-  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 4px 10px var(--shadow-medium);
 
 }
 
 
 .intro__title, .places__title, .events__title {
   display: inline-block;
-  color: rgb(255, 255, 255);
-  background: linear-gradient(to right, #222 0%, #54a4ff 25%, #54a4ff  75%, transparent 100%);
+  color: var(--text-white);
+  background: linear-gradient(to right, var(--gradient-dark) 0%, var(--accent-blue) 25%, var(--accent-blue)  75%, transparent 100%);
   padding: 10px 20px;
   font-size: 24px;
   font-weight: bold;
   padding-bottom: 5px;
   padding: 10px 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 4px 10px var(--shadow-medium);
 }
 
 
 .intro__subtitle {
   font-size: 22px;
-  color: #54a4ff;
+  color: var(--accent-blue);
   font-weight: bold;
   margin-top: 15px;
   margin-left: 5px;
   margin-bottom: 10px;
-  border-bottom: 2px solid #9ac9ff;
-  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid var(--accent-border);
+  text-shadow: 0px 4px 10px var(--shadow-medium);
 }
 
 
@@ -182,7 +179,7 @@ p {
 
 .intro__image {
   width: 100%;
-  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7);
+  box-shadow: 0px 0px 15px var(--shadow-red);
   border-radius: 12px;
 }
 
@@ -200,42 +197,42 @@ p {
 
 
 /* Contenedor de cada lugar */
-.places_box {
-  background-color: #555;
-  border: 2px solid #48b2fd;
+.places__box {
+  background-color: var(--background-box);
+  border: 2px solid var(--accent-light-blue);
   border-radius: 15px;
   padding: 15px;
   margin-bottom: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px var(--shadow-medium);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
-.places_box:hover {
+.places__box:hover {
   transform: scale(1.05);
-  box-shadow: 0px 0px 15px rgba(0, 128, 255, 0.7);
+  box-shadow: 0px 0px 15px var(--shadow-hover);
 }
 
 /* Título de cada lugar */
-.places_box-title {
+.places__box-title {
   font-size: 22px;
   font-family: 'Orbitron', sans-serif;
-  color: #9ac9ff;
+  color: var(--accent-border);
   margin-bottom: 8px;
-  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 4px 10px var(--shadow-medium);
 
 }
 
 
 /* Descripción de cada lugar */
-.places_box-description {
+.places__box-description {
   font-size: 16px;
-  color: #cccccc;
+  color: var(--text-light);
 }
 
 
-.places_box-image {
+.places__box-image {
   width: 350px;
   margin: 10px;
   border-radius: 12px;
@@ -245,7 +242,7 @@ p {
 }
 
 
-.places_box-image:hover {
+.places__box-image:hover {
   filter: sepia(20%) hue-rotate(-10deg) saturate(120%);
 }
 
@@ -265,8 +262,6 @@ p {
 .events__text {
   margin-top: 10px;
 }
-
-
 
 .brands {
   display: flex;
@@ -290,17 +285,14 @@ p {
   transform: scale(1.1);
 }
 
-
-
-
 /* Footer */
 .footer {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--text-dark);
+  color: var(--text-white);
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -311,14 +303,10 @@ p {
   transform: translateY(50%);
 }
 
-
-
-
-
-/* Móviles */
+/* Móviles (pantallas menores a 768px) */
 
 @media (max-width: 768px) {
-  /* Lateral */
+
   .sidebar {
     width: 100%;
     position: relative;
@@ -336,7 +324,7 @@ p {
     flex-direction: column;
   }
 
-  .places_box-image {
+  .places__box-image {
     width: 100%;
     height: auto;
   }
@@ -356,7 +344,7 @@ p {
   }
 }
 
-/* Estilos para tabletas (pantallas de 768px a 1024px) */
+/* Tablets (pantallas menores a 1800px) */
 @media (min-width: 768px) and (max-width: 1024px) {
 
   .sidebar {
@@ -377,7 +365,7 @@ p {
     flex-direction: column;
   }
 
-  .places_box {
+  .places__box {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -393,7 +381,6 @@ p {
 }
 
 
-/* Móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
 
   body {
@@ -408,10 +395,10 @@ p {
     width: 100%;
   }
 
-  .places_box {
+  .places__box {
     width: 100%;
   }
-  .places_box-image {
+  .places__box-image {
     width: 90%;
   }
 
@@ -441,7 +428,6 @@ p {
   }
 }
 
-/* Ajustes para pantallas menores a 1800px */
 @media (max-width: 1800px) {
   .places__article {
     flex-direction: row; 
