@@ -5,12 +5,59 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Orbitron', sans-serif;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url(/src/images/galaxy-background.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-/* Nav lateral */
+/* Header */
+header {
+  display: flex;
+  background-color: #272c32ad;
+  width: 75%; 
+  margin-left: auto;
+  height: 100px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-direction: row-reverse;
+  justify-content: left; 
+  align-items: center;
+}
+
+header img {
+  padding: 0 0px;
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 0;
+  animation: slideIn 3s ease-in-out;
+  clip-path: circle(30%);
+}
+
+header p {
+  margin: 0 20px;
+  font-size: 40px;
+  color: #ccc;
+  animation: slideIn 3s ease-in-out;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #cccccc;
+  text-shadow: 2px 2px 4px var(--box-shadow);
+}
+
 
 /* Nav lateral */
 .sidebar {
@@ -57,6 +104,40 @@ body {
 }
 
 
+
+
+/* Ocultar la barra de scroll en navegadores basados en Webkit */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nav lista */
+
+.sidebar__list {
+  list-style: none;
+}
+
+.sidebar__item {
+  margin-bottom: 10px;
+}
+
+.sidebar__link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  transition: 2s all ease-in-out;
+}
+
+.sidebar__link:hover {
+  color: var(--highlight-blue);
+  
+}
+
 /* Nav sublista */
 .sidebar__sublist {
   margin-left: 15px;
@@ -68,21 +149,11 @@ body {
 .sidebar__subitem {
   margin-top: 5px;
   margin-bottom: 10px;
-}
-
-.sidebar__link {
-  text-decoration: none;
-  color: var(--text-dark);
-  transition: all 0.2s ease-in-out;
-}
-
-.sidebar__link:hover {
-  color: var(--highlight-blue);
-}
+} 
 
 .sidebar__sublink {
   text-decoration: none;
-  color: var(--background-box);
+  color: var(--text-dark);
   transition: all 0.2s ease-in-out;
 }
 
@@ -97,38 +168,22 @@ body {
   border-radius: 12px;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-}
 
-/* Nav lateral */
-.sidebar {
-  width: 25%;
-  font-size: 18px;
-  padding: 30px;
-  position: fixed; 
-  top: 0;
-  left: 0;
-  height: 100vh;
-  overflow-y: auto;
-}
 
-/* Contenido principal */
+/* Contenedor principal */
 .container {
   margin-left: 25%;
-  position: relative;
   width: 50%;
+  height: auto;
   padding: 20px;
+  background-color: var(--text-white);
   box-shadow: 0 0 10px var(--box-shadow);
   border-radius: 8px;
-  font-family: Arial, sans-serif;
 }
 
 .container p {
+  color: var(--text-dark);
+  text-shadow: none;
   font-size: 20px;
   text-decoration: underline;
   padding-block: 5px;
@@ -159,8 +214,67 @@ a:hover {
   color: var(--highlight-blue);
 }
 
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--text-dark);
+  padding: 10px 20px;
+  width: 75%;
+  margin-left: auto;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+}
+
+.footer img {
+  clip-path: circle(30%);
+  width: 50px;
+}
+
+.footer p {
+  margin: 0;
+  margin-inline: 5px;
+  text-align: center;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer__logo {
+  width: 40px;
+  height: auto;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--text-white);
+  margin-inline: 2px;
+  transition: all .2s ease-in-out;
+}
+
+.footer__link:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+
 /* Móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
+
+  header {
+    justify-content: center;
+    width: 100%;
+  }
+
   .sidebar {
     width: 100%;
     position: relative;
@@ -174,9 +288,13 @@ a:hover {
     padding: 20px;
   }
 
+  .footer {
+    width: 100%;
+  }
+
 }
 
-/* Tablets (pantallas menores a 1800px) */
+/* Tablets (pantallas menores a 1196px) */
 @media (max-width: 1196px) {
 
   body {
@@ -187,4 +305,26 @@ a:hover {
     height: 300px;
   }
 
+  
+  .footer p {
+    font-size: 12px;
+  }
+
+  .footer__link {
+    font-size: 10px;
+  }
+
+}
+
+/* Animación */
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Triángulo Friki de Barcelona</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="/src/images/favicon.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="/src/images/logo.jpeg" type="image/x-icon">
   <link rel="stylesheet" href="colors.css">
 </head>
 <body>
+
+  <header>
+    <p>Mundo Geek</p>
+    <img src="/src/images/logo.jpeg" alt="">
+  </header>
+
   <!-- Nav lateral -->
   <aside class="sidebar">
     <nav class="sidebar__nav">
@@ -47,11 +53,6 @@
             <li class="sidebar__subitem"><a href="sub-pages/born.html" class="sidebar__sublink">Arkham Comics</a></li>
           </ul>
         </li>
-  
-        <li class="sidebar__item">
-          <a href="/src/sub-pages/documentation.html" class="sidebar__link">Enlaces y Documentación</a>
-        </li>
-        
       </ul>
     </nav>
 
@@ -106,13 +107,11 @@
       <h2 class="places__title">Lugares de interés</h2>
       
       <article class="places__article">
-
-
       <!-- Bloque de Calle Bailén -->
       <a href="sub-pages/bailen.html">
         <div id="calle-bailen" class="places__box">
           <h3 class="places__box-title">Calle Bailén</h3>
-          <img src="images/calle-bailen.jpeg"alt="Foto de Calle Bailén" class="places__box-image">
+          <img src="images/calle-bailen.jpeg"alt="Foto de Calle Bailén" class="places__box-image" loading="lazy">
           <p class="places__box-description">Norma Cómics <br> Gigamesh</p>
         </div>
       </a>
@@ -121,7 +120,7 @@
       <a href="sub-pages/alibei.html">
         <div id="calle-ali-bei" class="places__box">
           <h3 class="places__box-title">Calle Ali Bei - Arco de Triunfo</h3>
-          <img src="images/calle-ali-bei.jpg" alt="Foto de Calle Ali Bei y Arco de Triunfo" class="places__box-image">
+          <img src="images/calle-ali-bei.jpg" alt="Foto de Calle Ali Bei y Arco de Triunfo" class="places__box-image" loading="lazy">
           <p class="places__box-description">Kaburi <br> Otamashi Merchandising</p>
         </div>
       </a>
@@ -130,7 +129,7 @@
       <a href="sub-pages/born.html">
         <div id="el-born" class="places__box">
           <h3 class="places__box-title">El Born - Passeig de Sant Joan</h3>
-          <img src="images/el-born.jpg" alt="Foto de El Born y Passeig de Sant Joan" class="places__box-image">
+          <img src="images/el-born.jpg" alt="Foto de El Born y Passeig de Sant Joan" class="places__box-image" loading="lazy">
           <p class="places__box-description">Continuará Cómics <br>  Arkham Comics</p>
         </div>
       </a>
@@ -142,8 +141,7 @@
     <section id="eventos" class="events">
       
       <h2 class="events__title">Eventos y actividades</h2>
-      <div id="el-born" class="events__box">
-
+      <div class="events__box">
         <p class="events__text">Aquí puedes encontrar eventos como presentaciones de libros, firmas de autores y otras actividades relacionadas con la cultura geek y el Triángulo Friki.</p>
         
         <section class="brands">
@@ -161,8 +159,22 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p class="footer__text">© 2024 Triángulo Friki de Barcelona</p>
+    <div class="footer__content">
+      <img class="footer__logo" src="/src/images/logo.jpeg" alt="Logo Mundo Geek">
+      <nav class="footer__nav">
+        <a href="index.html" class="footer__link">Inicio</a>
+        <a href="sub-pages/bailen.html" class="footer__link">Calle Bailén</a>
+        <a href="sub-pages/alibei.html" class="footer__link">Calle Ali Bei</a>
+        <a href="sub-pages/born.html" class="footer__link">El Born</a>
+      </nav>
+    </div>
+    <p class="footer__text">© 2024 Mundo Geek. Todos los derechos reservados.</p>
+      <a href="" class="footer__link">Política de privacidad</a>
+      <a href="" class="footer__link">Términos y condiciones</a>
+      <a href="sub-pages/documentation.html" class="footer__link">Documentación</a>    
   </footer>
+  
+
 </body>
 </html>
 
