@@ -155,7 +155,7 @@ p {
 }
 
 .info__box {
-  background-color: var(--text-dark);
+  background-color: #272727c7;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px var(--shadow-medium);

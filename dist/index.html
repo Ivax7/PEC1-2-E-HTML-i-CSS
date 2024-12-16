@@ -12,12 +12,14 @@
 
   <header>
     <p>Mundo Geek</p>
-    <img src="/logo.7acf0475.jpeg" alt="">
+    <img src="/logo.7acf0475.jpeg" alt="Logo Mundo Geek">
+
   </header>
 
   <!-- Nav lateral -->
   <aside class="sidebar">
     <nav class="sidebar__nav">
+      <button class="sidebar__menu-toggle">☰</button>
       <ul class="sidebar__list">
         <li class="sidebar__item">
           <a href="#intro" class="sidebar__link">¿Qué es el Triángulo Friki de Barcelona?</a>
@@ -33,24 +35,24 @@
         <li class="sidebar__item">
           <a href="/sub-pages/bailen.html" class="sidebar__link">Calle Bailén</a>
           <ul class="sidebar__sublist">
-            <li class="sidebar__subitem"><a href="/sub-pages/bailen.html" class="sidebar__sublink">Norma Comics</a></li>
-            <li class="sidebar__subitem"><a href="/sub-pages/bailen.html" class="sidebar__sublink">Gigamesh</a></li>
+            <li class="sidebar__subitem"><a href="/sub-pages/shop-pages/norma.html" class="sidebar__sublink">Norma Comics</a></li>
+            <li class="sidebar__subitem"><a href="/sub-pages/shop-pages/gigamesh.html" class="sidebar__sublink">Gigamesh</a></li>
           </ul>
         </li>
         
         <li class="sidebar__item">
           <a href="/sub-pages/alibei.html" class="sidebar__link">Calle Ali Bei y zona del Arco de Triunfo</a>
           <ul class="sidebar__sublist">
-            <li class="sidebar__subitem"><a href="/sub-pages/alibei.html" class="sidebar__sublink">Kaburi</a></li>
-            <li class="sidebar__subitem"><a href="/sub-pages/alibei.html" class="sidebar__sublink">Otamashi Merchandising</a></li>
+            <li class="sidebar__subitem"><a href="/sub-pages/shop-pages/kaburi.html" class="sidebar__sublink">Kaburi</a></li>
+            <li class="sidebar__subitem"><a href="/sub-pages/shop-pages/otamashi.html" class="sidebar__sublink">Otamashi Merchandising</a></li>
           </ul>
         </li>
   
         <li class="sidebar__item">
           <a href="/sub-pages/born.html" class="sidebar__link">El Born y Passeig de Sant Joan</a>
           <ul class="sidebar__sublist">
-            <li class="sidebar__subitem"><a href="/sub-pages/born.html" class="sidebar__sublink">Continuará Comics</a></li>
-            <li class="sidebar__subitem"><a href="/sub-pages/born.html" class="sidebar__sublink">Arkham Comics</a></li>
+            <li class="sidebar__subitem"><a href="/sub-pages/shop-pages/continuara.html" class="sidebar__sublink">Continuará Comics</a></li>
+            <li class="sidebar__subitem"><a href="/sub-pages/shop-pages/arkham.html" class="sidebar__sublink">Arkham Comics</a></li>
           </ul>
         </li>
       </ul>
@@ -65,11 +67,18 @@
   
   <!-- Contenido principal -->
   <main class="main-content">
+
     <!-- Sección de introducción -->
     <section id="introduccion" class="intro">
       
-      <h1 class="intro__title">¿Qué es el Triángulo Friki de Barcelona?</h1>
+      <div class="intro__div">
+        <h1 class="intro__title">¿Qué es el Triángulo Friki de Barcelona?</h1>
+        <svg viewbox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <path class="triangle-path" d="M60 10 L10 110 L110 110 Z"></path>
+        </svg>
+      </div>
       
+    
       <section class="top__section">
         <div class="info__box" id="intoduccion">
           <h2 class="intro__subtitle">Introducción</h2>
@@ -139,7 +148,7 @@
 
     <!-- Sección de eventos y actividades -->
     <section id="eventos" class="events">
-      
+      <!-- Botón para abrir/cerrar el menú -->
       <h2 class="events__title">Eventos y actividades</h2>
       <div class="events__box">
         <p class="events__text">Aquí puedes encontrar eventos como presentaciones de libros, firmas de autores y otras actividades relacionadas con la cultura geek y el Triángulo Friki.</p>
@@ -175,6 +184,7 @@
   </footer>
   
 
+  <script src="/index.44983732.js"></script>
 <script src="/PEC2.59712999.js"></script></body>
 </html>
 

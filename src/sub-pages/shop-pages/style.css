@@ -47,6 +47,7 @@ header img {
   animation: slideIn 3s ease-in-out;
   clip-path: circle(30%);
 }
+
 header p {
   margin: 0 20px;
   font-size: 40px;
