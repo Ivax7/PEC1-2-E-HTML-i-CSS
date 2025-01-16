@@ -9,10 +9,11 @@ body {
   font-family: 'Orbitron', sans-serif;
   display: flex;
   background-color: var(--background-dark);
-  background-image: url(/src/images/galaxy-background.jpg);
+  background-image: url(/src/images/galaxy-background.avif);
   background-size: cover;
   background-position: center;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -83,6 +84,7 @@ header p {
 
 .sidebar__item {
   margin-bottom: 10px;
+  min-height: 50px;
 }
 
 .sidebar__link {
@@ -122,9 +124,10 @@ header p {
 
 /* Mapa */
 .map {
+  height: auto;
   width: 100%;
-  max-width: 800px;
-  border-radius: 12px;
+  max-width: 350px;
+  border: 6px solid var(--text-white);
 }
 
 

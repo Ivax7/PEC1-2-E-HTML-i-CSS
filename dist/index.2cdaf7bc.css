@@ -6,7 +6,7 @@
 
 body {
   background-color: var(--background-dark);
-  background-image: url("galaxy-background.9af39082.jpg");
+  background-image: url("galaxy-background.81f2a2bb.avif");
   background-position: center;
   background-size: cover;
   flex-direction: column;
@@ -101,7 +101,6 @@ a {
 
 .sidebar__link {
   color: var(--text-dark);
-  transition: all .2s ease-in-out;
 }
 
 .sidebar__link:hover {
@@ -121,6 +120,7 @@ a {
   border-radius: 12px;
   width: 100%;
   max-width: 800px;
+  height: 450px;
 }
 
 .main-content {
@@ -199,6 +199,7 @@ p {
   box-shadow: 0px 0px 15px var(--shadow-red);
   border-radius: 12px;
   width: 100%;
+  min-height: 100px;
 }
 
 .places__article {
@@ -436,7 +437,7 @@ p {
   }
 }
 
-@media (width <= 1211px) {
+@media (width <= 1200px) {
   .top__section {
     flex-direction: column;
   }

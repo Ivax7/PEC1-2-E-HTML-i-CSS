@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Triángulo Friki de Barcelona</title>
-  <link rel="shortcut icon" href="/src/images/logo.jpeg" type="image/x-icon">
+  <title>Alibei</title>
+  <link rel="shortcut icon" href="/src/images/logo.avif" type="image/x-icon">
   <link rel="stylesheet" href="/src/colors.css">
 
   
@@ -12,15 +12,18 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   
   <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <meta name="description" content="Descubre el Triángulo Friki de Barcelona, el destino ideal para los amantes de la cultura geek, cómics, anime, manga, videojuegos y más. Explora las mejores tiendas, eventos y actividades en el corazón de la ciudad. ¡Sumérgete en un mundo lleno de diversión y cultura geek!" />
+  <link rel="preload" as="image" href="/src/images/galaxy-background.avif">
+
 </head>
 <body>
 
   <header>
     <p>Mundo Geek</p>
-    <img src="/src/images/logo.jpeg" alt="Logo Mundo Geek">
+    <img src="/src/images/logo.avif" alt="Logo Mundo Geek" loading="lazy">
   </header>
 
   <!-- Nav lateral -->
@@ -63,9 +66,9 @@
           </ul>
         </li>
         
-        <iframe class="map" frameBorder="0" scrolling="no" src="https://es.wikiloc.com/wikiloc/embedv2.do?id=142601366&elevation=off&images=off&maptype=H" width="430" height="500" style="border-radius:12px;"></iframe>
-        <div style="color:#777;font-size:11px;line-height:16px;">Powered by&nbsp;<a style="color:#4C8C2B;font-size:11px;line-height:16px;" target="_blank" href="https://es.wikiloc.com">Wikiloc</a></div>
-    
+        <a href="https://es.wikiloc.com/wikiloc/embedv2.do?id=142601366&elevation=off&images=off&maptype=H" target="_blank"><img src="/src/images/mapa-wikiloc.avif" alt="Mapa de Wikiloc" class="map"></a>
+        <div style="color:#4F4F4F;font-size:11px;line-height:16px;margin-bottom: 10px;">Powered by&nbsp;<a style="color:#32571E;font-size:11px;line-height:16px;" target="_blank" href="https://es.wikiloc.com">Wikiloc</a></div>
+        
   </aside>
   
 
@@ -86,23 +89,23 @@
               <div class="swiper-container custom-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/kaburi1.jpg" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/kaburi1.avif" alt="Kaburi" loading="lazy">
                   </div>
                   
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/kaburi2.jpeg" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/kaburi2.avif" alt="Kaburi" loading="lazy">
                   </div>
                   
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/kaburi3.jpg" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/kaburi3.avif" alt="Kaburi" loading="lazy">
                   </div>
                   
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/kaburi4.jpg" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/kaburi4.avif" alt="Kaburi" loading="lazy">
                   </div>
                   
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/kaburi5.jpg" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/kaburi5.avif" alt="Kaburi" loading="lazy">
                   </div>
                   
                 </div>
@@ -151,19 +154,19 @@
               <div class="swiper-container custom-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/otamashi1.jpg" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/otamashi1.avif" alt="Otamashi" loading="lazy">
                   </div>
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/otamashi2.png" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/otamashi2.avif" alt="Otamashi" loading="lazy">
                   </div>
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/otamashi3.png" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/otamashi3.avif" alt="Otamashi" loading="lazy">
                   </div>
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/otamashi4.png" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/otamashi4.avif" alt="Otamashi" loading="lazy">
                   </div>
                   <div class="swiper-slide">
-                    <img class="intro__image" src="images-alibei/otamashi5.jpg" alt="Calle Bailen">
+                    <img class="intro__image" src="images-alibei/otamashi5.avif" alt="Otamashi" loading="lazy">
                   </div>
                 </div>
                 <!-- Botones de navegación -->
@@ -184,7 +187,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer__content">
-      <img class="footer__logo" src="/src/images/logo.jpeg" alt="Logo Mundo Geek">
+      <img class="footer__logo" src="/src/images/logo.avif" alt="Logo Mundo Geek" loading="lazy">
       <nav class="footer__nav">
         <a href="../index.html" class="footer__link">Inicio</a>
         <a href="bailen.html" class="footer__link">Calle Bailén</a>
@@ -198,7 +201,7 @@
       <a href="documentation.html" class="footer__link">Documentación</a>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
   <script src="/src/script.js"></script>
 </body>
 </html>

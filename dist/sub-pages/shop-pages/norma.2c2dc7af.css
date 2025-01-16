@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url("../../galaxy-background.9af39082.jpg");
+  background-image: url("../../galaxy-background.81f2a2bb.avif");
   background-position: center;
   background-size: cover;
   flex-direction: column;
@@ -117,6 +117,7 @@ header p {
   border-radius: 12px;
   width: 100%;
   max-width: 800px;
+  height: 450px;
 }
 
 .main-content {

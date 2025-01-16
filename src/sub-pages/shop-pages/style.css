@@ -17,7 +17,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-image: url(/src/images/galaxy-background.jpg);
+  background-image: url(/src/images/galaxy-background.avif);
   background-size: cover;
   background-position: center;
 }
@@ -130,6 +130,7 @@ header p {
 
 /* Mapa */
 .map {
+  height: 450px;
   width: 100%;
   max-width: 800px;
   border-radius: 12px;

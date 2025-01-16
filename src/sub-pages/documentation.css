@@ -14,9 +14,10 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-image: url(/src/images/galaxy-background.jpg);
+  background-image: url(/src/images/galaxy-background.avif);
   background-size: cover;
   background-position: center;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -96,6 +97,7 @@ p {
 
 .sidebar__item {
   margin-bottom: 10px;
+  min-height: 50px;
 }
 
 .sidebar__link {
@@ -168,12 +170,11 @@ p {
 
 /* Mapa */
 .map {
+  height: auto;
   width: 100%;
-  max-width: 800px;
-  border-radius: 12px;
+  max-width: 350px;
+  border: 6px solid var(--text-white);
 }
-
-
 
 /* Contenedor principal */
 .container {
